@@ -96,8 +96,9 @@ function searchPatients(criteria, value) {
             diagnosis: 'blood cancer'             
         }
     ]
+    
+    return patientsData
 
-    // write your imagination here ...
 }
 
 console.log(searchPatients('diagnosis', 'covid-19'))

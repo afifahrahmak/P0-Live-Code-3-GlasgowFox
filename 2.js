@@ -26,8 +26,45 @@
  * - Dilarang menggunakan built in function apapun
  */
 
+
+
 function absenceReport(data) {
-    // Insert your code here
+  
+  let countV = 0;
+  let countI = 0;
+  let countA = 0;
+  
+  let obj = {
+  
+    Week1: { Hadir: `${countV}`, Izin: `${countI}`, Absen: `${countA}` },
+    Week2: { Hadir: `${countV}`, Izin: `${countI}`, Absen: `${countA}` },
+    Week3: { Hadir: `${countV}`, Izin: `${countI}`, Absen: `${countA}` },
+    Week4: { Hadir: `${countV}`, Izin: `${countI}`, Absen: `${countA}` },
+  
+  }
+
+
+   for (let i = 0; i < data.length; i++)  {
+     for (let j = 0; j < data.length[i]; j++)  {
+       console.log(data[i], data [i][j]);
+       if (data[i][j] === 'v')  {
+         countV++
+        //  console.log(countV);
+         if (data[i][j] === 'I')  {
+           countI++
+           if (data[i][j] === 'A')  {
+             countA++
+           }
+         }
+       }
+
+
+
+
+     }
+
+   }
+   return obj
 }
 
 
@@ -47,10 +84,10 @@ console.log(absenceReport([
 */
 
 
-console.log(absenceReport([
-    ['Week1', 'V', 'I', "I", "V", "A"],
-    ['Week2', 'A', 'A', "I", "V", "V"]
-]));
+// console.log(absenceReport([
+//     ['Week1', 'V', 'I', "I", "V", "A"],
+//     ['Week2', 'A', 'A', "I", "V", "V"]
+// ]));
 /*
 {
   Week1: { Hadir: 2, Izin: 2, Absen: 1 },

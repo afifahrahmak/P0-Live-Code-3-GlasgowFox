@@ -34,9 +34,26 @@ RULES:
 
 function checkPassword(password) {
   // your code here
+  let alphabet = 'abcdefghijklmnopqrstuvwxyz'
+  let symbol = '~!@#$%%^&*()-+{}[]|/:;,.'
+  let num = '0123456789'
+
+  for (i = 0; i < password.length; i++)  {
+
+    // console.log(password[i]);
+    if (password.length <= 6 && password[i] !== alphabet, symbol, num)  {
+
+      return "Password must have more than 6 characters and must contain characters alphabet, number and symbol"
+      
+
+    }
+
+  }
 }
 
 function checkEmail(email) {
+
+
   // your code here
 }
 
@@ -47,11 +64,11 @@ function signUp(credentials) {
   //your code here
 }
 
-console.log(signUp({
-  username: 'irsyahmardiah',
-  password: 'ghtr56$W',
-  email: 'irsyah@mail.com'
-}));
+// console.log(signUp({
+//   username: 'irsyahmardiah',
+//   password: 'ghtr56$W',
+//   email: 'irsyah@mail.com'
+// }));
 //You have successful crated your account with username irsyahmardiah
 
 console.log(signUp({
@@ -61,25 +78,25 @@ console.log(signUp({
 }));
 //Password must have more than 6 characters and must contain characters alphabet, number and symbol
 
-console.log(signUp({
-  username: 'semmiverian',
-  password: 'ghtr$Wh7',
-  email: 'semmiverian@hacktiv8.ac.id'
-}));
-//For sign up, using email with domain .com or .org or co.id and please make sure your email doesn't contain space
+// console.log(signUp({
+//   username: 'semmiverian',
+//   password: 'ghtr$Wh7',
+//   email: 'semmiverian@hacktiv8.ac.id'
+// }));
+// //For sign up, using email with domain .com or .org or co.id and please make sure your email doesn't contain space
 
-console.log(signUp({
-  username: 'bayu',
-  password: 'iLoveJavaScript',
-  email: 'bayu@hacktiv8.ac.id'
-}));
-//There are something wrong, please check your email and password
+// console.log(signUp({
+//   username: 'bayu',
+//   password: 'iLoveJavaScript',
+//   email: 'bayu@hacktiv8.ac.id'
+// }));
+// //There are something wrong, please check your email and password
 
-console.log(signUp({
-  username: 'taufiq',
-  password: 't4&f1q',
-  email: 'tau@hacktiv8.org'
-}));
-//There are something wrong, please check your email and password
+// console.log(signUp({
+//   username: 'taufiq',
+//   password: 't4&f1q',
+//   email: 'tau@hacktiv8.org'
+// }));
+// //There are something wrong, please check your email and password
 
 module.exports = { checkEmail, checkPassword, signUp }

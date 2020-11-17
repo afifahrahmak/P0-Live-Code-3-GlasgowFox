@@ -28,13 +28,26 @@
  */
 
 function combineNames(names) {
-  // Insert your code here
+
+  let temp = ''
+  
+  for (let i = 0; i < names.length; i++)  {
+    
+    console.log(names[i]);
+    if (names[i] < names.length-1)  {
+      temp += names[i] 
+      temp += ','
+      
+    }
+    
+  }
+  return temp
 }
 
 console.log(combineNames(['Balmond', 'Ling', 'Pharsa', 'Khufra', 'Uranus'])) // 'Balmond, Ling, Pharsa, Khufra dan Uranus'
-console.log(combineNames(['Ruby', 'Kagura', 'Grock'])) // 'Ruby, Kagura dan Grock'
-console.log(combineNames(['Miya', 'Eudora'])) // 'Miya dan Eudora'
-console.log(combineNames(['Lancelot'])) // 'Lancelot'
+// console.log(combineNames(['Ruby', 'Kagura', 'Grock'])) // 'Ruby, Kagura dan Grock'
+// console.log(combineNames(['Miya', 'Eudora'])) // 'Miya dan Eudora'
+// console.log(combineNames(['Lancelot'])) // 'Lancelot'
 console.log(combineNames([])) // 'Silahkan masukkan kumpulan nama'
 
 module.exports = combineNames
